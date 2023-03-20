@@ -1,16 +1,9 @@
-import 'dart:async';
-
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
   await Firebase.initializeApp();
-  runZonedGuarded(() {
-    runApp(
-      const MyApp(),
-    );
-  }, FirebaseCrashlytics.instance.recordError);
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
