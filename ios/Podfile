@@ -32,10 +32,7 @@ pod 'GoogleMobileAdsMediationFacebook'
 target 'Runner' do
   use_frameworks!
   use_modular_headers!
-  pod 'Firebase', :modular_headers => true
-  pod 'FirebaseCore', :modular_headers => true
-  pod 'FirebaseCoreInternal', :modular_headers => true
-  pod 'GoogleUtilities', :modular_headers => true
+  pod 'nanopb', :path => './nanopb'
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
